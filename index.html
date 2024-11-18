@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Servicio de hoteleria</title>
+	<link rel="stylesheet" href="./assets/style.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+
+	<head>
+		<nav class="navbar">
+			<img src="./assets/images/logoHotel.webp" alt="logotipo del hotel" />
+			<ul class="links-hotel">
+				<li class="anchor-sections">El hotel</li>
+				<li class="anchor-sections">Servicios</li>
+				<li class="anchor-sections">Contacto</li>
+			</ul>
+		</nav>
+	</head>
+	<main>
+		<section>
+			<h2>Gestión de servicios de hotel</h2>
+			<p>Elimina los servicios que no necesites durante tu estadia:</p>
+
+			<ul id="servicios-lista" class="contenedor-lista-serevicios"></ul>
+		</section>
+		<section>
+			<span>Puede elegir y agregar servicios de esta lista:</span>
+			<ul id="servicios-disponibles" class="contenedor-lista-serevicios">
+				<li class="services">Estadia para mascotas</li>
+				<li class="services">Full access bar</li>
+				<li class="services">Tours guiados</li>
+			</ul>
+		</section>
+		<section>
+			<span>Puede agregar un servicio de su gusto, que no esté disponible, lo analizaremos</span>
+			<form id="form-sugerencia" class="formulario">
+				<label for="nombre">Nombre:</label>
+				<input type="text" id="nombre" name="nombre" required>
+
+				<label for="apellido">Apellido:</label>
+				<input type="text" id="apellido" name="apellido" required>
+
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+
+				<label for="habitacion">Habitación:</label>
+				<select id="habitacion" name="habitacion">
+					<option value="">Seleccione una habitación</option>
+					<!-- Generar opciones del 1 al 10 -->
+					<script>
+						for (let i = 1; i <= 10; i++) {
+							document.write(`<option value="${i}">${i}</option>`);
+						}
+					</script>
+				</select>
+
+				<label for="nuevo-servicio">Nuevo servicio:</label>
+				<textarea id="nuevo-servicio" name="nuevo-servicio" rows="4" required></textarea>
+
+				<button type="submit">Enviar sugerencia</button>
+			</form>
+
+			<div id="mensaje-sugerencia"></div>
+		</section>
+	</main>
+	<script src="./app.js"></script>
+</body>
+
+</html>

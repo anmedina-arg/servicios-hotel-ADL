@@ -1,0 +1,87 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+	list-style-type: none;
+}
+
+:root {
+	--gold-soft: #D4AF37;
+	/* Oro Suave - para detalles y acentos */
+	--deep-blue: #1A374D;
+	/* Azul Profundo - para fondo principal o encabezados */
+	--light-sand: #F2E9DC;
+	/* Arena Claro - para fondo de secciones */
+	--charcoal-gray: #3D3D3D;
+	/* Gris Carbón - para texto principal */
+	--ivory-white: #FFFFFF;
+	/* Blanco Marfil - para fondos secundarios o detalles */
+}
+
+body {
+	background-color: var(--light-sand);
+	color: var(--charcoal-gray);
+}
+
+.navbar {
+	background-color: var(--deep-blue);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.links-hotel {
+	display: flex;
+	color: var(--ivory-white);
+}
+
+.anchor-sections {
+	margin: 5px;
+}
+
+img {
+	width: 50px;
+	height: 50px;
+}
+
+section {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.contenedor-lista-serevicios {
+	background-color: var(--ivory-white);
+	display: flex;
+	flex-direction: column;
+}
+
+.services {
+	background-color: var(--gold-soft);
+	display: inline;
+	width: fit-content;
+	margin: 5px;
+	padding: 2px 5px 2px 5px;
+	border-radius: 999px;
+	position: relative;
+}
+
+.delete-button {
+	position: absolute;
+	right: -15px;
+	top: -5px;
+	background-color: red;
+	padding: 2px;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.formulario {
+	display: flex;
+	flex-direction: column;
+}
